@@ -1,0 +1,16 @@
+[package]
+name = "conf-chat"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+clap = {version = "4.5.21", features = ["derive"]}
+libp2p = { version = "0.54.1", features = ["identify", "mdns", "macros", "noise", "tcp", "tokio", "yamux", "kad", "gossipsub"] }
+tokio = { version = "1.41.1", features = ["rt-multi-thread", "macros", "time", "io-util", "io-std"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
